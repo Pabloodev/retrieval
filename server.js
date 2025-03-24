@@ -17,7 +17,7 @@ app.get('/run-script', async (req, res) => {
   }
 
   try {
-    const browser = await chromium.launch({ headless: false });
+    const browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
 
     await page.goto('https://cliente.tjtelecom.com.br/adm.php');
